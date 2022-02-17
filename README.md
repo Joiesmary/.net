@@ -28,6 +28,184 @@
 
 ![image](https://user-images.githubusercontent.com/19484531/154408925-b55c991a-a53f-4486-851c-4a08a8a67f88.png)
 
+program 2
+
+    using System;
+
+    namespace project1
+    {
+      class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1, num2, sum1=0, sum2=0;
+            Console.WriteLine("\n ---Amicable number\n");
+            Console.Write("\nEnter the first number:");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n Enter second number:");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            for(int i=1;i<num1;i++)
+            {
+                if(num1%i==0)
+                {
+                    sum1 += i;
+                }
+            }
+            for(int i=1;i<num2;i++)
+            {
+                if(num2%i==0)
+                {
+                    sum2 += i;
+                }
+            }
+            if(sum1==num2 && sum2==num1)
+            {
+                Console.WriteLine("\n The number {0} & {1} are  amicable", num1, num2);
+            }
+            else
+            {
+                Console.WriteLine("\n The number {0} & {1} are not amicable", num1, num2);
+            }
+        }
+    }
+}
+
+
+program 3
+
+
+using System;
+
+namespace project3
+{
+    class Program
+    {
+        string name;
+        int age;
+        string gender;
+        public Program(String name, int age,String gender)
+        {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+        public virtual void Display()
+        {
+            Console.WriteLine("\n--- Personal Details ---\n");
+            Console.WriteLine("Name : " + name);
+            Console.WriteLine("Age :" + age);
+            Console.WriteLine("gender :" + gender);
+
+        }
+    }
+    class CourseDetails:Program
+    {
+        int regno;
+        string course;
+        int semister;
+        public CourseDetails(String name,int age,String gender, int regno,String course,int semister):base(name,age,gender)
+        {
+            this.regno = regno;
+            this.course = course;
+            this.semister = semister;
+        }
+        public override void Display()
+        {
+            base.Display();
+            Console.WriteLine("\n--- course details---\n");
+            Console.WriteLine("Register number:" + regno);
+            Console.WriteLine("course : " + course);
+            Console.WriteLine("semister :" + semister);
+
+        }
+
+    }
+    class MarksDetails:CourseDetails
+    {
+        int[] marks = new int[5];
+        int total;
+        float average;
+        string grade;
+        int flagFail;
+        public MarksDetails(string name,int age,string gender,int regno,string course,int semister,int[] marks):base(name,age,gender,regno,course,semister)
+        {
+            total = 0;
+            for(int i=0;i<5;i++)
+            {
+                this.marks[i] = marks[i];
+                total += marks[i];
+                if(marks[i]<35)
+                {
+                    flagFail = 1;
+                }
+            }
+            calculate();
+        }
+        private void calculate()
+        {
+            average = total / 5;
+            if (flagFail == 1 || average < 40)
+                grade = "Fail";
+            else if (average >= 70)
+                grade = "Distinction";
+            else if (average >= 60)
+                grade = "First class";
+            else if (average >= 50)
+                grade = "Second class";
+            else
+                grade = "pass class";
+        }
+        public override void Display()
+        {
+            base.Display();
+            Console.WriteLine("\n---Marks details--\n");
+            Console.Write("marks in subject: ");
+            for (int i = 0; i < 5; i++)
+                Console.Write(marks[i] + "");
+            Console.WriteLine();
+            Console.WriteLine("total :" + total);
+            Console.WriteLine("Average: " + average);
+            Console.WriteLine("grade :" + grade);
+        }
+    }
+    class MultiLevel
+    {
+        public static void Main(String[] args)
+        {
+            MarksDetails Student1 = new MarksDetails("abijith", 22, "male", 2019001, "MSC", 5, new int[] { 77, 80, 98, 95, 90 });
+            Student1.Display();
+        }
+    }
+}
+
+
+program 4
+
+
+using System;
+
+namespace project2
+{
+    class Program
+    {
+        static int getGray(int n)
+        {
+        return n^(n>>1);
+        }
+        static void Main(string[] args)
+        {
+        int InputNum, GrayNum;
+        Console.Write("\n Enter the decimal number:");
+        InputNum = (Convert.ToInt32(Console.ReadLine()));
+        Console.WriteLine("\n Binary Equivalent of {0}:{1}", InputNum, Convert.ToString(InputNum, 2));
+        GrayNum = getGray(InputNum);
+        Console.WriteLine("\n Gray code equivalent of {0} : {1}", InputNum, Convert.ToString(GrayNum, 2));
+        }
+    }
+}
+
+
+
 
 program:5
 
