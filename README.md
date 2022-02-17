@@ -74,109 +74,109 @@
     program 3
 
 
-    using System;
+	    using System;
 
-    namespace project3
-    {
-    class Program
-    {
-        string name;
-        int age;
-        string gender;
-        public Program(String name, int age,String gender)
-        {
-            this.name = name;
-            this.age = age;
-            this.gender = gender;
-        }
-        public virtual void Display()
-        {
-            Console.WriteLine("\n--- Personal Details ---\n");
-            Console.WriteLine("Name : " + name);
-            Console.WriteLine("Age :" + age);
-            Console.WriteLine("gender :" + gender);
+	    namespace project3
+	    {
+	    class Program
+	    {
+		string name;
+		int age;
+		string gender;
+		public Program(String name, int age,String gender)
+		{
+		    this.name = name;
+		    this.age = age;
+		    this.gender = gender;
+		}
+		public virtual void Display()
+		{
+		    Console.WriteLine("\n--- Personal Details ---\n");
+		    Console.WriteLine("Name : " + name);
+		    Console.WriteLine("Age :" + age);
+		    Console.WriteLine("gender :" + gender);
 
-        }
-    }
-    class CourseDetails:Program
-    {
-        int regno;
-        string course;
-        int semister;
-        public CourseDetails(String name,int age,String gender, int regno,String course,int semister):base(name,age,gender)
-        {
-            this.regno = regno;
-            this.course = course;
-            this.semister = semister;
-        }
-        public override void Display()
-        {
-            base.Display();
-            Console.WriteLine("\n--- course details---\n");
-            Console.WriteLine("Register number:" + regno);
-            Console.WriteLine("course : " + course);
-            Console.WriteLine("semister :" + semister);
+		}
+	    }
+	    class CourseDetails:Program
+	    {
+		int regno;
+		string course;
+		int semister;
+		public CourseDetails(String name,int age,String gender, int regno,String course,int semister):base(name,age,gender)
+		{
+		    this.regno = regno;
+		    this.course = course;
+		    this.semister = semister;
+		}
+		public override void Display()
+		{
+		    base.Display();
+		    Console.WriteLine("\n--- course details---\n");
+		    Console.WriteLine("Register number:" + regno);
+		    Console.WriteLine("course : " + course);
+		    Console.WriteLine("semister :" + semister);
 
-        }
+		}
 
-    }
-    class MarksDetails:CourseDetails
-    {
-        int[] marks = new int[5];
-        int total;
-        float average;
-        string grade;
-        int flagFail;
-        public MarksDetails(string name,int age,string gender,int regno,string course,int semister,int[] marks):base(name,age,gender,regno,course,semister)
-        {
-            total = 0;
-            for(int i=0;i<5;i++)
-            {
-                this.marks[i] = marks[i];
-                total += marks[i];
-                if(marks[i]<35)
-                {
-                    flagFail = 1;
-                }
-            }
-            calculate();
-        }
-        private void calculate()
-        {
-            average = total / 5;
-            if (flagFail == 1 || average < 40)
-                grade = "Fail";
-            else if (average >= 70)
-                grade = "Distinction";
-            else if (average >= 60)
-                grade = "First class";
-            else if (average >= 50)
-                grade = "Second class";
-            else
-                grade = "pass class";
-        }
-        public override void Display()
-        {
-            base.Display();
-            Console.WriteLine("\n---Marks details--\n");
-            Console.Write("marks in subject: ");
-            for (int i = 0; i < 5; i++)
-                Console.Write(marks[i] + "");
-            Console.WriteLine();
-            Console.WriteLine("total :" + total);
-            Console.WriteLine("Average: " + average);
-            Console.WriteLine("grade :" + grade);
-        }
-    }
-    class MultiLevel
-    {
-        public static void Main(String[] args)
-        {
-            MarksDetails Student1 = new MarksDetails("abijith", 22, "male", 2019001, "MSC", 5, new int[] { 77, 80, 98, 95, 90 });
-            Student1.Display();
-        }
-    }
-    }
+	    }
+	    class MarksDetails:CourseDetails
+	    {
+		int[] marks = new int[5];
+		int total;
+		float average;
+		string grade;
+		int flagFail;
+		public MarksDetails(string name,int age,string gender,int regno,string course,int semister,int[] marks):base(name,age,gender,regno,course,semister)
+		{
+		    total = 0;
+		    for(int i=0;i<5;i++)
+		    {
+			this.marks[i] = marks[i];
+			total += marks[i];
+			if(marks[i]<35)
+			{
+			    flagFail = 1;
+			}
+		    }
+		    calculate();
+		}
+		private void calculate()
+		{
+		    average = total / 5;
+		    if (flagFail == 1 || average < 40)
+			grade = "Fail";
+		    else if (average >= 70)
+			grade = "Distinction";
+		    else if (average >= 60)
+			grade = "First class";
+		    else if (average >= 50)
+			grade = "Second class";
+		    else
+			grade = "pass class";
+		}
+		public override void Display()
+		{
+		    base.Display();
+		    Console.WriteLine("\n---Marks details--\n");
+		    Console.Write("marks in subject: ");
+		    for (int i = 0; i < 5; i++)
+			Console.Write(marks[i] + "");
+		    Console.WriteLine();
+		    Console.WriteLine("total :" + total);
+		    Console.WriteLine("Average: " + average);
+		    Console.WriteLine("grade :" + grade);
+		}
+	    }
+	    class MultiLevel
+	    {
+		public static void Main(String[] args)
+		{
+		    MarksDetails Student1 = new MarksDetails("abijith", 22, "male", 2019001, "MSC", 5, new int[] { 77, 80, 98, 95, 90 });
+		    Student1.Display();
+		}
+	    }
+	    }
 
 
     program 4
