@@ -335,6 +335,10 @@ program : 11
     }
      }
     }
+    
+    
+![image](https://user-images.githubusercontent.com/19484531/154415635-988253e6-92cd-4b3e-9caa-23caa49f4139.png)
+
 	
 ![image](https://user-images.githubusercontent.com/19484531/154413109-3b55ef21-e1e8-4002-b574-b9e6882416e2.png)
 ![image](https://user-images.githubusercontent.com/19484531/154413310-f59eaffd-272a-417e-912f-fbd4d5211e30.png)
@@ -342,9 +346,219 @@ program : 11
 
 
 
+program 12
+
+
+     using System;
+    using System.IO;
+    namespace ConsoleApp12
+    {
+    class FileRead
+    {
+        public static void Main()
+        {
+            string file1;
+            string file2;
+            Console.Write("Enter the first file path");
+            file1 = Console.ReadLine();
+
+            Console.Write("Enter the second file path");
+            file2 = Console.ReadLine();
+
+            if(!File.Exists(file1))
+            {
+                Console.WriteLine("First file does not exist!");
+            }
+            else if(!File.Exists(file2))
+            {
+                Console.WriteLine("Second file does not exist!");
+            }
+            else if(File.ReadAllText(file1)==File.ReadAllText(file2))
+            {
+                Console.WriteLine(" Both file contains same content");
+            }
+            else
+            {
+                Console.WriteLine("Content of files are not same");
+            }
+        }
+    }
+    }
+    
+    Files:
+    
+![image](https://user-images.githubusercontent.com/19484531/154415092-f1a9d895-52e7-4d2a-90d7-0cf9dd122502.png)
+![image](https://user-images.githubusercontent.com/19484531/154415120-4b2f1fcc-d1ff-41e7-8b46-ea9d6db021a2.png)
+![image](https://user-images.githubusercontent.com/19484531/154415149-0b61b870-c5e1-4e7e-ae5c-6c9cee221590.png)
+
+
+![image](https://user-images.githubusercontent.com/19484531/154413913-20c3f1c1-0e84-4a4a-b96c-c950150fecc0.png)
+![image](https://user-images.githubusercontent.com/19484531/154413995-e0142e9f-8132-41b4-8f88-c25f765492e5.png)
+![image](https://user-images.githubusercontent.com/19484531/154414092-46d2778d-94b8-4da3-9967-3598da124f4b.png)
+
+
+program 13:
+
+
+    using System;
+
+    namespace ConsoleApp13
+     {
+    class Fraction:IComparable
+    {
+        int z, n;
+        public Fraction(int z, int n)
+        {
+            this.z = z;
+            this.n = n;
+        }
+        public static Fraction operator+(Fraction a,Fraction b)
+        {
+            return new Fraction(a.z * b.n + a.n * b.z, a.n * b.n);
+        }
+        public static Fraction operator*(Fraction a,Fraction b)
+        {
+            return new Fraction(a.z *b.z,a.n * b.n);
+        }
+        public int CompareTo(object obj)
+        {
+            Fraction f = (Fraction)obj;
+            if ((float)z / n < (float)f.z / f.n)
+                return -1;
+            else if ((float)z / n > (float)f.z / f.n)
+                return 1;
+            else
+                return 0;
+        }
+        public override string ToString()
+        {
+            return z + "/" + n;
+        }
+    }
+    class IComInterface
+    {
+        public static void Main()
+        {
+            Fraction[] a =
+            {
+                new Fraction(5,2),
+                new Fraction(29,6),
+                new Fraction(4,5),
+                new Fraction(10,8),
+                new Fraction(34,7)
+            };
+            Array.Sort(a);
+            Console.WriteLine("Implementing the IComparable Interface in " + "Displaying Fraction:");
+            foreach(Fraction f in a)
+            {
+                Console.WriteLine(f + "");
+            }
+            Console.WriteLine();
+            Console.ReadLine();
+        }
+    }
+    }
+    
+    
+   ![image](https://user-images.githubusercontent.com/19484531/154414275-6204baf6-39a6-4b0e-8d10-9d59bbaf3190.png)
+
+program 14
+
+    using System;
+    using System.Threading;
+    namespace ConsoleApp14
+     {
+    class ThreadPoolProg
+    {
+        public void ThreadFun1(object obj)
+        {
+            int loop = 0;
+            for(loop=0;loop<=4;loop++)
+            {
+                Console.WriteLine("Thread1 is exicuting");
+            }
+        }
+        public void ThreadFun2(object obj)
+        {
+            int loop = 0;
+            for(loop=0;loop<=4;loop++)
+            {
+                Console.WriteLine("Thread2 is executing");
+            }
+        }
+        public static void Main()
+        {
+            ThreadPoolProg TP = new ThreadPoolProg();
+            for(int i=0;i<2;i++)
+            {
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun1));
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun2));
+            }
+            Console.ReadKey();
+        }
+    }
+    }
+    
+   ![image](https://user-images.githubusercontent.com/19484531/154414420-811ec35e-e868-411e-a07d-21690c40ccc4.png)
+
+
+program 15:
+
+     using System;
+
+    namespace ConsoleApp15
+     {
+    class ExceptionHandling
+    {
+        static void Main(string[] args)
+        {
+            Age a = new Age();
+            try
+            {
+                a.displayAge();
+            }
+            catch(AgeIsNegativeException e)
+            {
+                Console.WriteLine(" Age is NegativeException:{0}", e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Execution of Finally block done");
+            }
+        }
+    }
+    }
+    public class AgeIsNegativeException:Exception
+    {
+    public AgeIsNegativeException(string message):base(message)
+    {
+
+    }
+    }
+    public class Age
+    {
+    int age = -5;
+    public void displayAge()
+    {
+        if(age<0)
+        {
+            throw (new AgeIsNegativeException("Age can not be negative"));
+        }
+        else
+        {
+            Console.WriteLine("Age is :{0}", age);
+
+        }
+    }
+    }
+    
+    
+  ![image](https://user-images.githubusercontent.com/19484531/154414636-4ff422c7-d3e6-4a72-986a-8e883f860bd4.png)
 
 
 
+
+ 
                    
 
 
