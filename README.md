@@ -28,7 +28,7 @@
 
 ![image](https://user-images.githubusercontent.com/19484531/154408925-b55c991a-a53f-4486-851c-4a08a8a67f88.png)
 
-program 2
+    program 2
 
     using System;
 
@@ -68,16 +68,16 @@ program 2
             }
         }
     }
-}
+    }
 
 
-program 3
+    program 3
 
 
-using System;
+    using System;
 
-namespace project3
-{
+    namespace project3
+    {
     class Program
     {
         string name;
@@ -176,16 +176,16 @@ namespace project3
             Student1.Display();
         }
     }
-}
+    }
 
 
-program 4
+    program 4
 
 
-using System;
+    using System;
 
-namespace project2
-{
+    namespace project2
+     {
     class Program
     {
         static int getGray(int n)
@@ -202,17 +202,17 @@ namespace project2
         Console.WriteLine("\n Gray code equivalent of {0} : {1}", InputNum, Convert.ToString(GrayNum, 2));
         }
     }
-}
+    }
 
 
 
 
-program:5
+     program:5
 
-<br>using System;</br>
+    <br>using System;</br>
 
-<br>namespace ConsoleApp5</br>
-<br>{</br>
+    <br>namespace ConsoleApp5</br>
+    <br>{</br>
         <br>class Box</br>
         <br>{</br>
             <br>float width;</br>
@@ -374,7 +374,7 @@ program:5
 
 ![image](https://user-images.githubusercontent.com/19484531/154411411-ea68d691-e58d-46b2-9abb-3d4a5b5402c2.png)
 
-program 10:
+     program 10:
 
                  
 				 using System;
