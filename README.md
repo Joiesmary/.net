@@ -70,6 +70,9 @@
     }
     }
 
+![image](https://user-images.githubusercontent.com/19484531/154427251-07c96f4f-5f4e-499c-973c-1d85ffe60c77.png)
+
+![image](https://user-images.githubusercontent.com/19484531/154427402-62e50180-84b3-445f-a0a5-a09cad755cfa.png)
 
     program 3
 
@@ -177,6 +180,7 @@
 		}
 	    }
 	    }
+![image](https://user-images.githubusercontent.com/19484531/154426618-d5e93876-7357-42b6-a1ab-f54c709f3d98.png)
 
 
     program 4
@@ -204,6 +208,7 @@
     }
     }
 
+![image](https://user-images.githubusercontent.com/19484531/154427696-25ef41c1-c1c3-4892-8b41-c39d848fd537.png)
 
 
 
