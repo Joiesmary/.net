@@ -1,5 +1,5 @@
 # .net
-
+     1) C# Program to Print a Binary Triangle.
 <br>program 1</br>
 
 <br>using System;</br>
@@ -28,7 +28,8 @@
 
 ![image](https://user-images.githubusercontent.com/19484531/154408925-b55c991a-a53f-4486-851c-4a08a8a67f88.png)
 
-    program 2
+    program 2: C# Program to Check Whether the Entered Number is an Amicable 
+     Number or Not
 
     using System;
 
@@ -74,7 +75,8 @@
 
 ![image](https://user-images.githubusercontent.com/19484531/154427402-62e50180-84b3-445f-a0a5-a09cad755cfa.png)
 
-    program 3
+    program 3 : C# Program to Illustrate Multilevel Inheritance with Virtual 
+     Methods (displaying student details).
 
 
 	    using System;
@@ -183,7 +185,7 @@
 ![image](https://user-images.githubusercontent.com/19484531/154426618-d5e93876-7357-42b6-a1ab-f54c709f3d98.png)
 
 
-    program 4
+    program 4: C# Program to Create a Gray Code.
 
 
     using System;
@@ -212,7 +214,9 @@
 
 
 
-     program:5
+     program5: C# program to calculate volume of 2 boxes and find the resultant volume after addition of 2 boxes by implementing operator overloading
+
+
 
     <br>using System;</br>
 
@@ -259,6 +263,52 @@
 
 ![image](https://user-images.githubusercontent.com/19484531/154410221-c2677375-e62c-4959-abba-b6dbb17fa36d.png)
 
+             6) C# Program to Implement Principles of Delegates (converting 
+    input string to uppercase first, last and entire string).
+    
+    using System;
+     namespace Exercises
+     {
+    class Delegates
+    {
+        delegate string UppercaseDelegate(string input);
+        static string UppercaseFirst(string input)
+        {
+            char[] buffer = input.ToCharArray();
+            buffer[0] = char.ToUpper(buffer[0]);
+            return new string(buffer);
+        }
+        static string UppercaseLast(string input)
+        {
+            char[] buffer = input.ToCharArray();
+            buffer[buffer.Length - 1] = char.ToUpper(buffer[buffer.Length - 1]);
+            return new string(buffer);
+        }
+        static string UppercaseAll(string input)
+        {
+            return input.ToUpper();
+        }
+        static void WriteOutput(string input, UppercaseDelegate del)
+        {
+            Console.WriteLine("Input String: {0}", input);
+            Console.WriteLine("Output String: {0}", del(input));
+        }
+        static void Main()
+        {
+            WriteOutput("tom ", new UppercaseDelegate(UppercaseFirst));
+            WriteOutput("tom", new UppercaseDelegate(UppercaseLast));
+            WriteOutput("tom", new UppercaseDelegate(UppercaseAll));
+            Console.ReadLine();
+        }
+    }
+    }
+    
+    o/p
+    
+   ![image](https://user-images.githubusercontent.com/19484531/156504015-6d3aedce-07f5-4c0f-b976-51713298b081.png)
+
+
+     7) C# Program to Generate Register Number automatically for 100 Students using Static Constructor
 
 <br>program 7:</br>
 <br>using System;</br>
@@ -295,7 +345,8 @@
 ![image](https://user-images.githubusercontent.com/19484531/154410573-965caeeb-b723-4e7c-b044-8944643c3019.png)
 
 
-<br>program 8:</br>
+     <br>program 8:</br> C# Program to Find the Frequency of the Word ʺisʺ in a given 
+      Sentence.
 
 <br>using System;</br>
 
@@ -328,7 +379,7 @@
 ![image](https://user-images.githubusercontent.com/19484531/154410969-117f3ca6-06da-48a1-8620-0411df344eeb.png)
 
 
-<br>program 9:
+     <br>program 9:  C# program that benchmarks 2D, jagged array allocation.
 <br>using System;</br> 
 <br>using System.Diagnostics;</br> 
 <br>namespace ConsoleApp9</br> 
@@ -379,7 +430,9 @@
 
 ![image](https://user-images.githubusercontent.com/19484531/154411411-ea68d691-e58d-46b2-9abb-3d4a5b5402c2.png)
 
-     program 10:
+     program 10: C# Program to Find the Sum of the Values on Diagonal of the 
+     Matrix.
+
 
                  
 				 using System;
@@ -437,7 +490,9 @@
 ![image](https://user-images.githubusercontent.com/19484531/154412111-98f009ef-8bdb-4140-a30a-d685f1065635.png)
 ![image](https://user-images.githubusercontent.com/19484531/154412241-debd47f5-c42c-4471-9df9-2b2c7a5cba55.png)
 
-program : 11
+     program : 11  C# Program to Create a File, Check the Existence of a File and 
+     Read the Contents of the File.
+
 
            
 		   
@@ -529,7 +584,7 @@ program : 11
 
 
 
-program 12
+     program 12: C# Program to Perform File Comparison
 
 
      using System;
@@ -580,7 +635,7 @@ program 12
 ![image](https://user-images.githubusercontent.com/19484531/154414092-46d2778d-94b8-4da3-9967-3598da124f4b.png)
 
 
-program 13:
+     program 13: C# Program to Implement IComparable Interface.
 
 
     using System;
@@ -645,7 +700,7 @@ program 13:
     
    ![image](https://user-images.githubusercontent.com/19484531/154414275-6204baf6-39a6-4b0e-8d10-9d59bbaf3190.png)
 
-program 14
+    program 14: C# Program to Create Thread Pools
 
     using System;
     using System.Threading;
@@ -685,7 +740,9 @@ program 14
    ![image](https://user-images.githubusercontent.com/19484531/154414420-811ec35e-e868-411e-a07d-21690c40ccc4.png)
 
 
-program 15:
+    	program 15:Write a C# program to demonstrate error handling using Try, Catch 
+      and Finally block.
+
 
      using System;
 
