@@ -975,6 +975,95 @@
 
 
 
+    Windows Application form
+
+     using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
+
+    namespace ConvertDigitstoword
+     {
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lbl_words.Text = NumtoWord(long.Parse(txt_num.Txt));
+        }
+        public string NumtoWord(long number)
+        {
+            string word = "";
+            if(number==0)
+            {
+                return "Zero";
+            }
+            if(number<0)
+            {
+                return "Minus" + Math.Abs(number);
+            }
+            if(number/10000000>0)
+            {
+                word += NumtoWord(number / 10000000) + "Corer";
+                number %= 10000000;
+            }
+            if(number/100000>0)
+            {
+                word += NumtoWord(number / 100000) + "lacs";
+                number %= 100000;
+            }
+            if(number/1000>0)
+            {
+                word += NumtoWord(number / 1000) + "Thousand";
+                number %= 1000;
+            }
+            if(number/100>0)
+            {
+                word += NumtoWord(number / 100) + "Hundread";
+                number %= 100;
+            }
+            if(number>0)
+            {
+                string[] units=new string[]{ "zero", "one", "Two", "three", "four", "five", "six", "seven", "eight", "nine", "eleven", "twelve", "Thirteen", "forteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+                String[] Tens = new string[] { "zero", "ten", "Twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "Eighty", "ninty" };
+                if (number < 20)
+                {
+                    word += units[number];
+                }
+                else
+                {
+                    word += Tens[number / 10];
+                    if(number%10>0)
+                    {
+                        word += units[number % 10];
+                    }
+                }
+            }
+            return word;
+        }
+
+        
+    }
+    }
+    
+    output: 
+  ![image](https://user-images.githubusercontent.com/19484531/157640098-03bcfe8e-4f0b-4cd5-89de-4422e026f6e3.png)
+![image](https://user-images.githubusercontent.com/19484531/157640158-eeba6b36-9571-4d7d-8bc4-3b7775fbf140.png)
+
+
+![image](https://user-images.githubusercontent.com/19484531/157641718-bed9ab7d-f231-4987-8978-eea0511f98bf.png)
+![image](https://user-images.githubusercontent.com/19484531/157641827-fb31644a-6a11-450b-8a5c-ae4bc18a7d01.png)
+
+
 
 
 
