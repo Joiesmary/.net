@@ -1124,5 +1124,56 @@
 ![image](https://user-images.githubusercontent.com/19484531/158739163-804bacfb-e867-47b7-b833-e228b94091f4.png)
 
 
+    4) Progress Bar
+     using System;
+     using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading;
+    using System.Windows.Forms;
+
+    namespace ProgresBar
+    {
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.RunWorkerAsync();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                Thread.Sleep(50);
+                backgroundWorker1.ReportProgress(i);
+            }
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Value = e.ProgressPercentage;
+            this.Text = "Progress: " + e.ProgressPercentage.ToString() + "%";
+        }
+    }
+    }
+
+![image](https://user-images.githubusercontent.com/19484531/158745439-8bbf5e14-8852-4b05-b2be-e0a5d2e936d3.png)
+
+
+![image](https://user-images.githubusercontent.com/19484531/158745318-3787943c-0731-4e87-a628-bcae19bc3655.png)
+
+
+
+
 
 
