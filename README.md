@@ -1064,7 +1064,64 @@
 ![image](https://user-images.githubusercontent.com/19484531/157641827-fb31644a-6a11-450b-8a5c-ae4bc18a7d01.png)
 
 
+     3)
+         using System;
+     using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+     using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
 
+    namespace WindowsFormsApp2
+    {
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnrev_Click(object sender, EventArgs e)
+        {
+            string inputString, revstr = "";
+            int Length;
+            inputString = txtInput.Text;
+            Length = inputString.Length - 1;
+            while (Length >= 0)
+            {
+                revstr = revstr + inputString[Length];
+                Length--;
+            }
+            MessageBox.Show("Reverse String Is : " + revstr, "Result");
+        }
+
+        private void btntrim_Click(object sender, EventArgs e)
+        {
+            string inputString;
+            inputString = txtInput.Text;
+            MessageBox.Show("The String After Trimming : " + inputString.Trim(), "Result");
+        }
+
+        private void btnpad_Click(object sender, EventArgs e)
+        {
+            string inputString;
+            inputString = txtInput.Text;
+            inputString = inputString.PadLeft(10, '*');
+            inputString = inputString.PadRight(15, '*');
+            MessageBox.Show("String After Padding : " + inputString, "Result");
+
+        }
+    }
+    }
+
+
+![image](https://user-images.githubusercontent.com/19484531/158738991-a873a7a6-64e6-4508-ae9c-020a9b8edb0a.png)
+![image](https://user-images.githubusercontent.com/19484531/158739083-0550181a-d89f-40ae-bf65-6883920c0eca.png)
+![image](https://user-images.githubusercontent.com/19484531/158739127-b886e63c-942c-40d8-b132-2e124992bdd4.png)
+![image](https://user-images.githubusercontent.com/19484531/158739163-804bacfb-e867-47b7-b833-e228b94091f4.png)
 
 
 
