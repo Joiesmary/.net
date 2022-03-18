@@ -1211,8 +1211,121 @@
     }
     }
     
+    using System;
+    using System.Collections.Generic;
+     using System.ComponentModel;
+     using System.Data;
+     using System.Drawing;
+     using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+      using System.Windows.Forms;
+
+     namespace Game
+     {
+    public partial class Form1 : Form
+    {
+        static Random r = new Random();
+        int value;
+        int guessnum;
+        int win = 10;
+        int guess = 1;
+      
+        public Form1()
+        {
+            InitializeComponent();
+            value = r.Next(100);
+            this.Controls.Clear();
+            this.BackColor = Color.SkyBlue;
+            this.AutoSize = true;
+            this.Padding = new Padding(16);
+            Label label = new Label();
+            label.Text = "Pick a number between 1 and 100";
+            label.Bounds = new Rectangle(10, 20, 340, 40);
+            label.Font = new Font("Arial", 16);
+            textBox1 = new TextBox();
+            textBox1.Bounds = new Rectangle(20, 50, 120, 80);
+            textBox1.Font = new Font("Arial", 24);
+
+            button1 = new Button();
+            button1.Text = " Check Your Guess ";
+            button1.Bounds = new Rectangle(160, 50, 120, 40);
+            button1.BackColor = Color.LightGray;
+            button1.Click += new EventHandler(button1_Click);
+            Label label2 = new Label();
+            label2.Text = "Low Guess";
+            label2.Bounds = new Rectangle(20, 150, 160, 40);
+            label2.Font = new Font("Arial", 18);
+            richTextBox1 = new RichTextBox();
+            richTextBox1.Bounds = new Rectangle(20, 190, 160, 300);
+            richTextBox1.Font = new Font("Arial", 16);
+
+            Label label3 = new Label();
+            label3.Text = "High Guess";
+            label3.Bounds = new Rectangle(180, 150, 160, 40);
+            label3.Font = new Font("Arial", 18);
+            richTextBox2 = new RichTextBox();
+            richTextBox2.Bounds = new Rectangle(180, 190, 160, 300);
+            richTextBox2.Font = new Font("Arial", 16);
+            label4 = new Label();
+            label4.Bounds = new Rectangle(20, 100, 340, 40);
+            label4.Font = new Font("Arial", 16);
+            this.Controls.Add(label);
+            this.Controls.Add(textBox1);
+            this.Controls.Add(button1);
+            this.Controls.Add(label4);
+            this.Controls.Add(label2);
+            this.Controls.Add(label3);
+            this.Controls.Add(richTextBox1);
+            this.Controls.Add(richTextBox2);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                return;
+            }
+            guessnum = Convert.ToInt32(textBox1.Text);
+            textBox1.Text = String.Empty;
+            if (win >= 0)
+            {
+                if (guessnum == value)
+                {
+                    MessageBox.Show("You have guessed the number! \n The number was " + value);
+                    InitializeComponent();
+
+                }
+                else if (guessnum < value)
+                {
+                    richTextBox1.Text += guessnum + "\n";
+                    MessageBox.Show("Wrong Guess and number of guesses  left are " + (10 - guess));
+
+                }
+                else if (guessnum > value)
+                {
+                    richTextBox2.Text += guessnum + "\n";
+                    MessageBox.Show("Wrong Guess and number of guesses  left are " + (10 - guess));
+                }
+                guess++;
+                win--;
+            }
+            if (guess == 11)
+            {
+                MessageBox.Show("You loose,Correct Guess is " + value);
+            }
+        }
+        
+    }
+    }
     
-    
+
+
+![image](https://user-images.githubusercontent.com/19484531/158954933-6a96738d-6223-4edf-a1de-82c39fab9eea.png)
+
+![image](https://user-images.githubusercontent.com/19484531/158955158-f5bc0619-ec6e-45df-92f2-87b1f60e08ef.png)
+![image](https://user-images.githubusercontent.com/19484531/158955310-c971447c-146e-4da6-8bbf-21183cc5a95d.png)
+![image](https://user-images.githubusercontent.com/19484531/158955687-64ea5d78-f365-4647-b200-83bd7b42a07c.png)
 
 
 
