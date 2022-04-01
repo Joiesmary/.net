@@ -435,9 +435,9 @@
 
 
                  
-				 using System;
+    using System;
 
-          namespace ConsoleApp10
+     namespace ConsoleApp10
        {
     class SumOfDiagonals
     {
@@ -496,8 +496,8 @@
 
            
 		   
-		   using System;
-       using System.IO;
+     using System;
+     using System.IO;
       namespace ConsoleApp11
      {
     class FileRead
@@ -800,7 +800,7 @@
      Extra programs;
 
 
-            1)Fibonacci Series
+     16)Fibonacci Series
 
 
      using System;
@@ -824,7 +824,7 @@
     
  ![image](https://user-images.githubusercontent.com/19484531/155664675-7ae3b2d9-dc78-4f0c-8228-34e8ba0cbc06.png)
 
-    2) Write a c# program to check prime number.
+    17) Write a c# program to check prime number.
 
        using System;
        public class PrimeNumberExample
@@ -853,7 +853,7 @@
 ![image](https://user-images.githubusercontent.com/19484531/155665028-786400b9-9511-4bb0-82f3-4ee3ea065821.png)
 
 
-    3)Write a c# program to check palindrome number.
+    18)Write a c# program to check palindrome number.
 
      using System;
      public class PalindromeExample
@@ -882,7 +882,7 @@
 ![image](https://user-images.githubusercontent.com/19484531/155665320-56c7d7c5-0430-45e3-92d0-23e6e93c9dfa.png)
 
 
-    4)Write a c# program to print factorial of a number.
+    19)Write a c# program to print factorial of a number.
 
      using System;
      public class FactorialExample
@@ -902,7 +902,7 @@
     
   ![image](https://user-images.githubusercontent.com/19484531/155665504-c4460178-d7a1-49a1-a984-d702f6e67ab5.png)
 
-     5) Write a c# program to check armstrong number.
+     20) Write a c# program to check armstrong number.
      using System;
      public class ArmstrongExample
      {
@@ -930,7 +930,7 @@
 ![image](https://user-images.githubusercontent.com/19484531/155665800-cfcaa7a8-045e-4d02-84ab-40b5fc499e18.png)
 
 
-    6) Write a c# program to print sum of digits.
+    21) Write a c# program to print sum of digits.
     
     using System;
     public class SumExample
@@ -952,7 +952,7 @@
     
   ![image](https://user-images.githubusercontent.com/19484531/155665993-7752813b-6889-4901-9c76-f13bae2e2df8.png)
   
-    7)Write a c# program to reverse given number.
+    22)Write a c# program to reverse given number.
 
     using System;
     public class ReverseExample
@@ -977,6 +977,9 @@
 
     Windows Application form
 
+     23) C# Program to Convert Digits to Words
+     
+     
      using System;
     using System.Collections.Generic;
     using System.ComponentModel;
@@ -1064,8 +1067,10 @@
 ![image](https://user-images.githubusercontent.com/19484531/157641827-fb31644a-6a11-450b-8a5c-ae4bc18a7d01.png)
 
 
-     3)
-         using System;
+     24)C# Program to Perform Reversal, Padding and Trimming Operations on string
+     
+     
+     using System;
      using System.Collections.Generic;
     using System.ComponentModel;
     using System.Data;
@@ -1124,7 +1129,7 @@
 ![image](https://user-images.githubusercontent.com/19484531/158739163-804bacfb-e867-47b7-b833-e228b94091f4.png)
 
 
-    4) Progress Bar
+    25) C# Program to Create a Progress Bar Control. 
      using System;
      using System.Collections.Generic;
     using System.ComponentModel;
@@ -1174,7 +1179,7 @@
 
 
 
-     20. Develop a winform application to create flat clock.
+     26. Develop a winform application to create flat clock.
      
      using System;
      using System.Collections.Generic;
@@ -1216,7 +1221,7 @@
     
   ![image](https://user-images.githubusercontent.com/19484531/161200844-e828a27e-82b4-483a-85eb-8f98c0698795.png)
   
-     21)C# Program to perform a number guessing game
+     27)C# Program to perform a number guessing game
     
     using System;
     using System.Collections.Generic;
@@ -1334,7 +1339,7 @@
 ![image](https://user-images.githubusercontent.com/19484531/158955310-c971447c-146e-4da6-8bbf-21183cc5a95d.png)
 ![image](https://user-images.githubusercontent.com/19484531/158955687-64ea5d78-f365-4647-b200-83bd7b42a07c.png)
 
-     C# Program to Perform binary tree
+    28) Develop an application to construct a graphical binary tree where you need to create, add, search and remove nodes
 
      using System;
     using System.Collections.Generic;
@@ -1645,7 +1650,7 @@
 ![image](https://user-images.githubusercontent.com/19484531/159864285-2ebb000e-f8be-4885-b1a1-092feb19f052.png)
 
 
-        22)Develop an application to create a notepad
+        29)Develop an application to create a notepad
 
           using System;
            using System.IO;
