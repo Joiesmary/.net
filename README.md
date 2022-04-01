@@ -1175,6 +1175,7 @@
 
 
      20. Develop a winform application to create flat clock.
+     
      using System;
      using System.Collections.Generic;
      using System.ComponentModel;
@@ -1210,6 +1211,12 @@
      } 
     }
     }
+    
+    
+    
+  ![image](https://user-images.githubusercontent.com/19484531/161200844-e828a27e-82b4-483a-85eb-8f98c0698795.png)
+  
+     21)C# Program to perform a number guessing game
     
     using System;
     using System.Collections.Generic;
