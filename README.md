@@ -1764,3 +1764,75 @@
 ![image](https://user-images.githubusercontent.com/19484531/160990446-92fc5a7d-b4f6-471d-8a58-88c4bc5245cc.png)
 ![image](https://user-images.githubusercontent.com/19484531/160997202-42651b3d-d055-4cea-bfc8-059820fcd87e.png)
 ![image](https://user-images.githubusercontent.com/19484531/160997250-27cc3734-cf28-48c0-9303-b929863dc3d7.png)
+
+
+     using System;
+     using System.Collections.Generic;
+     using System.ComponentModel;
+     using System.Data;
+     using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
+
+    namespace currency
+    {
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            {
+                label4.Visible = true;
+                if (textBox1.Text == "")
+    {
+                    label4.Text =" Enter the amount ";
+                }
+                else
+                {
+                    Double convertedamt = Convert.ToDouble(textBox1.Text);
+                    if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "USD")
+                    {
+                        Double a = convertedamt / 74;
+                        label4.Text = a + "$";
+                    }
+                    else if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "SAR")
+                   {
+                        Double a = convertedamt / 17;
+                        label4.Text = a + "SAR";
+                    }
+                     else if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "EUR")
+                      {
+                        Double a = convertedamt / 11;
+                        label4.Text = a + "EUR";
+                    }
+                     else
+                    {
+                        label4.Text = "Please Enter the conversion code " ;
+                    }
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            label4.Text = "" ;
+        }
+    }
+    }
+    
+   ![image](https://user-images.githubusercontent.com/19484531/165695806-118d7964-56fb-4bb4-999a-6d2738675464.png)
+   ![image](https://user-images.githubusercontent.com/19484531/165695881-6feaed1f-5c7b-4394-8dd0-e2ca61d9496e.png)
+
+
